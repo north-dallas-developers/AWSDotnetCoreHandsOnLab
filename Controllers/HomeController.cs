@@ -54,8 +54,6 @@ namespace AWSDotnetCoreHandsOnLab.Controllers
 
             }
 
-            vm.Random = connString;
-
             return View("RDS", vm);
         }
 

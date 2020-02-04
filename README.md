@@ -13,6 +13,7 @@ If using Windows and want to deploy to Linux, install WinSCP (https://winscp.net
 ## Step 1: Get the code
 
 * Download this: https://github.com/north-dallas-developers/AWSDotnetCoreHandsOnLab
+* Run it to make sure it works, then stop it
 
 ## Step 2: Code Review
 
@@ -30,7 +31,7 @@ This is done first because databases take the longest to created.
 * Write down whatever credentials you choose
 * Make it publicly accessible
 
-## Step 5: Publish a self-contained app
+## Step 4: Publish a self-contained app
 
 `dotnet publish -c Release -r linux-x64 --self-contained true`
 
@@ -47,6 +48,8 @@ Tar: `tar -czvf app_files.tar.gz -C bin/Release/netcoreapp3.1/linux-x64/ .`
 ## Into to VPCs, Subnets, and EC2
 
 Explain VPCs, subnets, and EC2
+Open up VPC in the console
+Show pinning
 
 ## Create EC2 Instance
 
@@ -103,17 +106,17 @@ Find the server url and go there in the browser.
 
 ## Setup the Database
 
-* Add rule allowing 1433 traffic for your ip
+* Add rule allowing 1433 traffic for your ip, source `0.0.0.0/0`
 * Connect via SSMS or Azure Data Studio
 * Run `database-script.sql`
 * Change app settings on server to add connection string. Example: "Server=[url];Database=CoolStuff;User Id=admin;Password=[password];"
+* Run app again and test
 
+Hint: if you ever need to kill an app that's using your port, use `fuser -k 5000/tcp`
 
 Show updated diagram with RDS
 
 ## Setup Second Webserver
-
-Now is a time to explain security groups again maybe
 
 * Name subnet 2
 * Create new EC2 instance as before, except *choose subnet-2*
@@ -131,7 +134,7 @@ Now is a time to explain security groups again maybe
 * Application Load Balancer
 * Specify the two AZs/Subnets from earlier
 * Step 2 (accept defaults)
-* Step 3 create new and name it
+* Step 3 create new security group and name it (do not start the name with "sg-")
 * When the targets are added, make sure they are added with port 5000
 * This will take several minutes to create and register targets
 * Test by killing one of the servers

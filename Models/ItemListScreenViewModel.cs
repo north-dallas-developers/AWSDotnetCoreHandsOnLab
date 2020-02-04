@@ -6,7 +6,6 @@ namespace AWSDotnetCoreHandsOnLab.Models
     public class ItemListScreenViewModel
     {
         public List<Item> Items { get; set; }
-        public string Random { get; set; }
     }
 
     public class Item
