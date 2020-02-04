@@ -42,8 +42,8 @@ See https://docs.microsoft.com/en-us/dotnet/core/rid-catalog for other runtime i
 Issue: this nests all the code in the `bin\Release\netcoreapp3.1/linux-x64` folders and I don't know why.
 Issue: windows users I guess will just use the feature in Explorer?
 
-Zip: `zip -r app_files.zip bin/Release/netcoreapp3.1/linux-x64/`
-Tar: `tar -czvf app_files.tar.gz -C bin/Release/netcoreapp3.1/linux-x64/ .`
+Zip: `zip -r app_files.zip bin/Release/netcoreapp3.1/linux-x64/publish/`
+Tar: `tar -czvf app_files.tar.gz -C bin/Release/netcoreapp3.1/linux-x64/publish/ .`
 
 ## Into to VPCs, Subnets, and EC2
 
