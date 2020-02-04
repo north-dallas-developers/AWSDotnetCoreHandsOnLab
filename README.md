@@ -60,6 +60,8 @@ Create an EC2 instance.
 
 Re-explain EC2, VPCs, subnets with what they have.
 
+Name your security groups
+
 ## Get Code to the Server
 
 Necessary before using `scp` and `ssh` below.
@@ -91,7 +93,7 @@ Tar: `tar -zxvf app_files.tar.gz -C app`
 
 ## Running the App
 
-Start the app
+Start the app by `cd`ing into the directory and running this:
 
 `ASPNETCORE_URLS=http://0.0.0.0:5000 ASPNETCORE_ENVIRONMENT=Development ./AWSDotnetCoreHandsOnLab`
 
