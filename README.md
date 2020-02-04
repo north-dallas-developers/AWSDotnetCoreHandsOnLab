@@ -12,7 +12,13 @@ If using Windows and want to deploy to Linux, install WinSCP (https://winscp.net
 
 ## Step 1: Get the code
 
-## Step 2: Create RDS Database
+* Download this: https://github.com/north-dallas-developers/AWSDotnetCoreHandsOnLab
+
+## Step 2: Code Review
+
+Let's look at the code
+
+## Step 3: Create RDS Database
 
 This is done first because databases take the longest to created.
 
@@ -24,13 +30,7 @@ This is done first because databases take the longest to created.
 * Write down whatever credentials you choose
 * Make it publicly accessible
 
-
-## Step 3: They download this code
-
-They hopefully shouldn't need to change any of this to get it working.
-Take a quick look at code and run it
-
-## Step 4: Publish a self-contained app
+## Step 5: Publish a self-contained app
 
 `dotnet publish -c Release -r linux-x64 --self-contained true`
 
