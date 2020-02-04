@@ -1,0 +1,12 @@
+﻿@model AWSDotnetCoreHandsOnLab.Models.ItemListScreenViewModel
+@{
+    ViewData["Title"] = "Connecting to RDS";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var item in Model.Items)
+{
+    <p>@item.Description</p>
+}
+
+<p>Random: @Model.Random</p>
