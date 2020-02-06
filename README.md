@@ -39,9 +39,6 @@ See https://docs.microsoft.com/en-us/dotnet/core/rid-catalog for other runtime i
 
 ## Step etc.: Zip the files up
 
-Issue: this nests all the code in the `bin\Release\netcoreapp3.1/linux-x64` folders and I don't know why.
-Issue: windows users I guess will just use the feature in Explorer?
-
 Zip: `zip -r app_files.zip bin/Release/netcoreapp3.1/linux-x64/publish/`
 Tar: `tar -czvf app_files.tar.gz -C bin/Release/netcoreapp3.1/linux-x64/publish/ .`
 
@@ -66,6 +63,8 @@ Re-explain EC2, VPCs, subnets with what they have.
 Name your security groups
 
 ## Get Code to the Server
+
+Presenter note: First show bash version, then winscp version.
 
 Necessary before using `scp` and `ssh` below.
 
@@ -98,7 +97,7 @@ Tar: `tar -zxvf app_files.tar.gz -C app`
 
 Start the app by `cd`ing into the directory and running this:
 
-`ASPNETCORE_URLS=http://0.0.0.0:5000 ASPNETCORE_ENVIRONMENT=Development ./AWSDotnetCoreHandsOnLab`
+`./AWSDotnetCoreHandsOnLab --urls http://+:5000 --environment Development`
 
 Add rule to open port 5000 (launch-wizard-*x*)
 
