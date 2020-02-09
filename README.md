@@ -68,7 +68,7 @@ Presenter note: First show bash version, then winscp version.
 
 Necessary before using `scp` and `ssh` below.
 
-`chmod 400 nddg-keypair.pem`
+`chmod 400 feb-fun.pem`
 
 Now ssh into the box to make sure you can connect. Then `exit`.
 
